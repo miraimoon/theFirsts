@@ -1,0 +1,321 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* Commo */
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.clear{
+    clear:both;
+}
+.row{
+    padding-left: -8px !important;
+    padding-right: -8px !important;
+}
+.row::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.col{
+    float: left;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+}
+.col-full{
+    width: 100%;
+}
+.col-half{
+    width: 50%;
+}
+.col-third{
+    width: 33.3333333%;
+}
+.padding-32{
+    padding: 32px 0;
+}
+.text-white{
+    color: #fff;
+}
+.btn{
+    text-decoration: none;
+    color: #fff;
+    background-color: #000;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    display: inline-block;
+    text-align: center;
+}
+.btn:hover{
+    color: #000;
+    background-color: #ccc;
+}
+.float-right{
+    float: right;
+}
+.mt-16{
+    margin-top: 16px;
+}
+.mt-8{
+    margin-top: 8px;
+}
+
+/* Main */
+#header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 46px;
+    background-color: #000;
+    z-index: 1;
+  
+}
+#nav{
+    display: inline;
+}
+#nav li{
+    display: inline-block;
+    position: relative;
+    line-height: 46px;
+    
+}
+#nav li a{
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    text-transform: uppercase;
+    padding: 0 24px;
+}
+#nav> li:hover >a{
+    color: #000;
+    background-color: #ccc;
+    cursor: pointer;
+}
+#nav .subnav{
+    min-width: 162px;
+    position: absolute;
+    display: block;
+    background-color:#fff;
+    box-shadow: 0 4px 10px 0 rgb(0 0 0 / 20%);
+    display: none;
+    
+}
+#nav .subnav  a{
+    color: #000;
+    text-transform: unset;
+}
+#nav .subnav li:hover{
+    background-color: #ccc; 
+    width: 100%;
+    display: block;
+}
+#nav li:hover .subnav {
+    display: block;
+}
+#nav .nav-arrow-down{
+    font-size: 12px;
+}
+#header .mobile-menu-btn,
+#header .search-btn{
+    float: right;
+    padding: 0 24px;
+    line-height: 46px;
+}
+
+#header .search-btn:hover{
+    background-color: #f44336;
+    cursor: pointer;
+}
+#header .mobile-menu-btn:hover{
+    background-color: #ccc;
+}
+#header .mobile-menu-btn:hover .menu-icon{
+    color: #000;
+}
+#header .mobile-menu-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+#header .menu-icon,
+#header .search-icon{
+    color: #fff;
+    font-size: 16px;
+    line-height: 46px;
+    display: inline-block;
+}
+#slider{
+    position: relative;
+    margin-top: 46px;
+    padding-top: 50%;
+    background: url("../img/slider/sd2a.jpg") top center / cover no-repeat ;
+}
+#slider .text-content{
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    padding: 32px 8px;
+    color: #fff;
+}
+
+#slider .text-heading{
+    font-size: 24px;
+    margin: 10px 0;
+    font-weight: 400;
+}
+#slider .text-description{
+    margin: 15px 0;
+    font-weight: bolder;
+}
+/* content */
+#content .content-section{
+    width: 800px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 64px 16px;
+    text-align: justify;
+}
+#content .section-heading{
+    text-align: center;
+    margin: 10px 0;
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 4px;
+}
+#content .section-sub-heading{
+    text-align: center;
+    margin: 15px  0;
+    opacity: 0.4;
+    font-size: 15px;
+    font-style: oblique;
+}
+#content .about-text{
+    text-align: justify;
+    font-size: 15px;
+    line-height: 22px;
+}
+#content .member-name{
+    text-align: center;
+    margin: 15px 0;
+}
+#content .member-list{
+    margin-top: 32px;
+}
+#content .member-img{
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: 16px;
+}
+/* Tour section */
+.tour-section{
+    background-color: #000;
+}
+.tickets-list{
+    background-color: #fff;
+
+}
+.tickets-list li{
+    padding: 14px 20px;
+    list-style: none;
+    color: #757575;
+    font-weight: 300;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+.sold-out{
+    margin-left: 16px;
+    background-color: #f44336;
+    color: #fff;
+    padding: 4px 8px;
+}
+.quantity{
+    float: right;
+    background-color: #000;
+    color: #fff;
+    border-radius: 50%;
+    padding: 2px 8px;
+    line-height: 16px;
+}
+/* place */
+.place-img{
+    display: block; /*mặc định inline sẽ tạo 1 khoản trống với body*/
+    width: 100%;
+}
+.place-img:hover{
+    opacity: 0.4;
+}
+.place-body{
+    background-color: #fff;
+    color: #000;
+    font-size: 15px;
+    font-weight: 300;
+    padding: 0 16px 15px;
+    display: inline-block; /*vì nó k ăn thuộc tính padding*/
+}
+
+.place-heading{
+    padding: 15px 0;
+}
+.place-time{
+    margin: 15px 0;
+    opacity: 0.4;
+}
+.place-desc{
+    margin: 15px 0;
+    line-height: 1.4;
+}
+/* contact */
+.contact-infor p{
+    margin-top: 6px;
+    font-size: 16px;
+    line-height: 1.4;
+}
+.contact-infor i{
+    font-size: 18px;
+    padding-right: 16px;
+}
+
+.contact-form .form-control {
+    display: block;
+    width: 175px;
+    min-width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+}
+.contact-form .form-controls{
+    width: 360px !important;
+    display: block;
+    
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+}
+.map{
+    width: 100%;
+}
+/* footer */
+#footer{
+    text-align: center;
+    padding: 64px 16px;
+}
+.socials-list a{
+    text-decoration: none;
+    color: #000;
+    opacity: 0.7;
+    font-size: 26px;
+}
+.copyright {
+    padding: 15px 0;
+    font-size: 16px;
+    opacity: 0.6;
+}
+.copyright a{
+    font-size: 16px;
+    color: #000;
+}
